@@ -1,0 +1,7 @@
+---
+- name: Problematic example
+  hosts: localhost
+  tasks:
+    - name: Echo a message
+      ansible.builtin.shell: echo hello # <-- command is better in this case
+      changed_when: false

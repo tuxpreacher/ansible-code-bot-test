@@ -1,0 +1,10 @@
+---
+- name: Example playbook
+  hosts: localhost
+  become: true # <- Activates privilege escalation.
+  tasks:
+    - name: Start the httpd service as the apache user
+      ansible.builtin.service:
+        name: httpd
+        state: started
+      become_user: apache # <- Does not change the user because "become: true" is not set.

@@ -1,0 +1,5 @@
+---
+- hosts: localhost # <-- playbook name[play]
+  tasks:
+    - name: create placefolder file # <-- name[casing] due lack of capital letter
+      ansible.builtin.command: touch /tmp/.placeholder

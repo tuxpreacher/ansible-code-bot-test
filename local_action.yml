@@ -1,0 +1,7 @@
+---
+- name: Problematic examples
+  hosts: localhost
+  tasks:
+    - name: Task example
+      local_action:
+        module: ansible.builtin.debug

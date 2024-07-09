@@ -1,0 +1,7 @@
+---
+- name: Example playbook
+  hosts: localhost
+  tasks:
+    - name: Shut down Debian systems
+      ansible.builtin.command: /sbin/shutdown -t now
+      when: "{{ ansible_facts['os_family'] == 'Debian' }}" # <- Nests a Jinja expression in a conditional statement.

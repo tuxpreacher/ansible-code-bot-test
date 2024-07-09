@@ -1,0 +1,15 @@
+---
+- name: Problematic example
+  hosts: localhost
+  vars:
+    foo: "{{some|dict2items}}" # <-- jinja[spacing]
+    bar: "{{ & }}" # <-- jinja[invalid]
+    blub: "{{ foo | bool }}" # <-- jinja[spacing] - 'when' has implicit templating
+    foo1: 0777 # <-- yaml[octal-values]
+    foo2: 0o777 # <-- yaml[octal-values]
+    foo2: duplicate # <-- yaml[key-duplicates]
+    bar: ...       # <-- yaml[comments-indentation]
+  tasks:
+    - name: Echo a message
+      ansible.builtin.command: echo hello
+      changed_when: false
