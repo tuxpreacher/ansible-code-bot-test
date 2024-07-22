@@ -3,7 +3,7 @@
   hosts: localhost
   tasks:
     - name: Create a placefolder file
-      ansible.builtin.command: chdir=/tmp touch foo # <-- don't use free-form
+
     - name: Use raw to echo
       ansible.builtin.raw: executable=/bin/bash echo foo # <-- don't use executable=
       changed_when: false

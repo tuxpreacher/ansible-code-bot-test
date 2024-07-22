@@ -1,4 +1,5 @@
+---
 # Missing YAML document start.
-foo: 0777 # <-- yaml[octal-values]
-foo2: 0o777 # <-- yaml[octal-values]
-bar: ...       # <-- yaml[comments-indentation]
+foo: "0777" # <-- yaml[octal-values]
+foo2: "0o777" # <-- yaml[octal-values]
+bar: "..." # <-- yaml[comments-indentation]
