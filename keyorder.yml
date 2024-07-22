@@ -6,5 +6,5 @@
       block:
         - name: Display a message
           debug:
-            msg: "Hello world!"
+            msg: Hello world!
       when: true # <-- when key should be before block
